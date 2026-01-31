@@ -1,0 +1,26 @@
+.stores {
+  display: flex;
+  flex-direction: column;
+
+  & li {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dfdfdf;
+    padding: 10px 0;
+
+    &:last-child {
+      border-bottom: 1px solid #dfdfdf;
+    }
+
+    & .group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      & a {
+        width: fit-content;
+      }
+    }
+  }
+}

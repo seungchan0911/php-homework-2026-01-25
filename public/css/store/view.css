@@ -1,0 +1,58 @@
+.store-logo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.bookcase {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px 10px;
+  
+  & .book {
+    position: relative;
+    aspect-ratio: 1 / 1.4;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    background: #f8f8f8;
+    overflow: hidden;
+
+    &.super-admin {
+      & .group {
+        transform: translateY(26px);
+      }
+    }
+
+    &:hover {
+      & .group {
+        transform: translate(0) !important;
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    & .group {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(60px);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+      padding: 10px;
+      border-top: 1px solid #dfdfdf;
+      background: #fff;
+      transition: .25s;
+
+      & .button {
+        margin-top: 5px;
+      }
+    }
+  }
+}
